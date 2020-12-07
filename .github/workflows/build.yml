@@ -21,3 +21,19 @@ jobs:
 
     - name: Build libstdc++
       run: ./build-libstdc++
+
+    - name: Package
+      if: github.event_name == 'release'
+      shell: bash
+      run: 7z a stdlibs.zip no-pic pic
+
+    - name: Upload
+      if: github.event_name == 'release'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      with:
+        asset_path: ./stdlibs.zip
+        upload_url: ${{github.event.release.upload_url}}
+        asset_name: stdlibs.zip
+        asset_content_type: application/zip
