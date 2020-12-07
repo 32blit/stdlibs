@@ -36,10 +36,10 @@ cd build
 
 make -j $JOBS
 
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/newlib/libc.a $OUT_DIR_NOPIC/libc_nano.a
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/newlib/libg.a $OUT_DIR_NOPIC/libg_nano.a
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/newlib/libm.a $OUT_DIR_NOPIC/
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/libgloss/libnosys/libnosys.a $OUT_DIR_NOPIC
+cp arm-none-eabi/thumb/v7e-m+dp/hard/newlib/libc.a $OUT_DIR_NOPIC/libc_nano.a
+cp arm-none-eabi/thumb/v7e-m+dp/hard/newlib/libg.a $OUT_DIR_NOPIC/libg_nano.a
+cp arm-none-eabi/thumb/v7e-m+dp/hard/newlib/libm.a $OUT_DIR_NOPIC/
+cp arm-none-eabi/thumb/v7e-m+dp/hard/libgloss/libnosys/libnosys.a $OUT_DIR_NOPIC
 
 cd ..
 
@@ -52,7 +52,7 @@ cd build-pic
 
 make -j $JOBS
 
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/newlib/libc.a $OUT_DIR_PIC/libc_nano.a
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/newlib/libg.a $OUT_DIR_PIC/libg_nano.a
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/newlib/libm.a $OUT_DIR_PIC/
-cp arm-none-eabi/thumb/v7e-m/fpv5/hard/libgloss/libnosys/libnosys.a $OUT_DIR_PIC
+cp arm-none-eabi/thumb/v7e-m+dp/hard/newlib/libc.a $OUT_DIR_PIC/libc_nano.a
+cp arm-none-eabi/thumb/v7e-m+dp/hard/newlib/libg.a $OUT_DIR_PIC/libg_nano.a
+cp arm-none-eabi/thumb/v7e-m+dp/hard/newlib/libm.a $OUT_DIR_PIC/
+cp arm-none-eabi/thumb/v7e-m+dp/hard/libgloss/libnosys/libnosys.a $OUT_DIR_PIC
