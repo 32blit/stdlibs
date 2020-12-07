@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-GCC_VERSION=gcc-7.3.0
-NEWLIB_VERSION=newlib-3.1.0.20181231
+GCC_VERSION=gcc-9.2.0
+NEWLIB_VERSION=newlib-3.3.0
 NEWLIB_INCLUDES=$PWD/build/$NEWLIB_VERSION/newlib/libc/include
 JOBS=$(nproc --all)
 OUT_DIR_NOPIC=$PWD/no-pic
