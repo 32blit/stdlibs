@@ -44,8 +44,8 @@ mkdir -p build
 cd build
 ../configure --target=arm-none-eabi \
     $LIBSTDCXX_FLAGS \
-    CFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fno-exceptions -isystem $NEWLIB_INCLUDES" \
-    CXXFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fno-exceptions -isystem $NEWLIB_INCLUDES"
+    CFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -isystem $NEWLIB_INCLUDES" \
+    CXXFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -isystem $NEWLIB_INCLUDES"
 
 make -j $JOBS
 
@@ -59,8 +59,8 @@ mkdir -p build-pic
 cd build-pic
 ../configure --target=arm-none-eabi \
     $LIBSTDCXX_FLAGS \
-    CFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fno-exceptions -fPIC -mno-pic-data-is-text-relative -mno-single-pic-base -isystem $NEWLIB_INCLUDES" \
-    CXXFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fno-exceptions -fPIC -mno-pic-data-is-text-relative -mno-single-pic-base -isystem $NEWLIB_INCLUDES"
+    CFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fPIC -mno-pic-data-is-text-relative -mno-single-pic-base -isystem $NEWLIB_INCLUDES" \
+    CXXFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fPIC -mno-pic-data-is-text-relative -mno-single-pic-base -isystem $NEWLIB_INCLUDES"
 
 make -j $JOBS
 
