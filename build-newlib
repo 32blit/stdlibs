@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-NEWLIB_VERSION=newlib-3.3.0
+NEWLIB_VERSION=newlib-4.2.0.20211231
 JOBS=$(nproc --all)
 OUT_DIR_NOPIC=$PWD/no-pic
 OUT_DIR_PIC=$PWD/pic
