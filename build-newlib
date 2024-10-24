@@ -32,7 +32,7 @@ mkdir -p build
 cd build
 ../configure --target=arm-none-eabi \
     $NEWLIB_FLAGS \
-    CFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fshort-wchar"
+    CFLAGS_FOR_TARGET="-g -O2 -ffunction-sections -fdata-sections -fshort-wchar"
 
 make -j $JOBS
 
@@ -48,7 +48,7 @@ mkdir -p build-pic
 cd build-pic
 ../configure --target=arm-none-eabi \
     $NEWLIB_FLAGS \
-    CFLAGS_FOR_TARGET="-g -Os -ffunction-sections -fdata-sections -fshort-wchar -fPIC -mno-pic-data-is-text-relative -mno-single-pic-base"
+    CFLAGS_FOR_TARGET="-g -O2 -ffunction-sections -fdata-sections -fshort-wchar -fPIC -mno-pic-data-is-text-relative -mno-single-pic-base"
 
 make -j $JOBS
 
