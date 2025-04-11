@@ -2,7 +2,7 @@
 set -e
 
 GCC_VERSION=gcc-12.2.0
-NEWLIB_VERSION=newlib-4.2.0.20211231
+NEWLIB_VERSION=newlib-4.4.0.20231231
 NEWLIB_INCLUDES=$PWD/build/$NEWLIB_VERSION/newlib/libc/include
 JOBS=$(nproc --all)
 OUT_DIR_NOPIC=$PWD/no-pic
