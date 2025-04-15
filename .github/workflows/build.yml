@@ -31,4 +31,4 @@ jobs:
       if: github.event_name == 'release'
       uses: softprops/action-gh-release@v1
       with:
-        files: ${{runner.workspace}}/stdlibs.zip
+        files: ./stdlibs.zip
